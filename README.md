@@ -4,15 +4,14 @@ Contains all my Mac modifications that I use to maintain a consistent control ex
 
 ## Keyboard Mappings
 
-
-
 When frequently switching between different system platforms (Mac, Linux, or Windows), the biggest issue is that the keys behave differently or are mapped inconsistently — even when using the same external keyboard.
 Since I don’t want to constantly deal with that inconsistency, I simply standardized everything to match the majority setup: Linux and Windows.
-
-
+For that I used Karabinger-Elements.
 
 Dowmload Karabinger-Elements here:
 https://karabiner-elements.pqrs.org/
+
+Important note: This works properly for Logitech MX combined, with DE-CH Layout only!
 
 ### Installation
 
