@@ -29,13 +29,12 @@ curl -O https://raw.githubusercontent.com/patrickblattner/mac-mods/main/keyboard
 8. Right mouse click on the menu bar icon of karabinger-elements
 9. Select "Settings..."
 10. Select "Device"
-10. Activate "Modify events" for only the "Logitech MX Keyboard"
-11. Select "Virtual Keyboard"
-12. Chose "ISO (...)"
+11. Activate "Modify events" for only the "Logitech MX Keyboard"
+12. Select "Virtual Keyboard"
 13. Select "Profiles"
 14. Press "Add New Profile"
 15. Name it as you wanna, lets say MX for this tutorial
 16. Select Profile "MX"
-16. Select "Complex Modifications"
-17. Select "Add predefined rule"
-18. Select under "Windows basics: Ctrl...", the button "Enable all"
+17. Select "Complex Modifications"
+18. Select "Add predefined rule"
+19. Select under "Windows basics: Ctrl...", the button "Enable all"
