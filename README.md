@@ -24,7 +24,7 @@ cd ~/.config/karabiner/assets/complex_modifications
 nano windows_like_basics.json
 cat << 'EOF' > ~/.config/karabiner/assets/complex_modifications/windows-basics.json
 {
-  "title": "Windows basics: Ctrl C/V/X/Z + Shift+Z Redo + Home/End",
+  "title": "Windows basics: Ctrl C/V/X/Z + Shift+Z Redo + Home/End + Find/Replace + Select All",
   "rules": [
     {
       "description": "Fix Swiss keyboard: § and < swap (inkl. Shift)",
@@ -92,6 +92,34 @@ cat << 'EOF' > ~/.config/karabiner/assets/complex_modifications/windows-basics.j
       ]
     },
     {
+      "description": "Ctrl+F -> Cmd+F (Find), Ctrl+H -> Opt+Cmd+F (Find & Replace) (except terminals)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "f", "modifiers": { "mandatory": ["control"] } },
+          "to": [{ "key_code": "f", "modifiers": ["command"] }],
+          "conditions": [{ "type": "frontmost_application_unless", "bundle_identifiers": ["^com\\.apple\\.Terminal$", "^com\\.googlecode\\.iterm2$", "^co\\.zeit\\.hyper$", "^com\\.github\\.wez\\.wezterm$"] }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "h", "modifiers": { "mandatory": ["control"] } },
+          "to": [{ "key_code": "f", "modifiers": ["command", "option"] }],
+          "conditions": [{ "type": "frontmost_application_unless", "bundle_identifiers": ["^com\\.apple\\.Terminal$", "^com\\.googlecode\\.iterm2$", "^co\\.zeit\\.hyper$", "^com\\.github\\.wez\\.wezterm$"] }]
+        }
+      ]
+    },
+    {
+      "description": "Ctrl+A -> Cmd+A (Select All) (except terminals)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "a", "modifiers": { "mandatory": ["control"] } },
+          "to": [{ "key_code": "a", "modifiers": ["command"] }],
+          "conditions": [{ "type": "frontmost_application_unless", "bundle_identifiers": ["^com\\.apple\\.Terminal$", "^com\\.googlecode\\.iterm2$", "^co\\.zeit\\.hyper$", "^com\\.github\\.wez\\.wezterm$"] }]
+        }
+      ]
+    },
+    {
       "description": "Home/End -> Cmd+Left/Right",
       "manipulators": [
         {
@@ -122,4 +150,6 @@ EOF
 14. Press "Add New Profile"
 15. Name it as you wanna, lets say MX for this tutorial
 16. Select Profile "MX"
-
+16. Select "Complex Modifications"
+17. Select "Add predefined rule"
+18. Select under "Windows basics: Ctrl...", the button "Enable all"
