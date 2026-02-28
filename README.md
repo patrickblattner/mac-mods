@@ -24,7 +24,7 @@ cd ~/.config/karabiner/assets/complex_modifications
 nano windows_like_basics.json
 cat << 'EOF' > ~/.config/karabiner/assets/complex_modifications/windows-basics.json
 {
-  "title": "Windows basics: Ctrl C/V/X/Z + Shift+Z Redo + Home/End + Find/Replace + Select All",
+  "title": "Windows basics: Ctrl C/V/X/Z + Shift+Z Redo + Home/End + Find/Replace + Select All + Save",
   "rules": [
     {
       "description": "Fix Swiss keyboard: § and < swap (inkl. Shift)",
@@ -115,6 +115,17 @@ cat << 'EOF' > ~/.config/karabiner/assets/complex_modifications/windows-basics.j
           "type": "basic",
           "from": { "key_code": "a", "modifiers": { "mandatory": ["control"] } },
           "to": [{ "key_code": "a", "modifiers": ["command"] }],
+          "conditions": [{ "type": "frontmost_application_unless", "bundle_identifiers": ["^com\\.apple\\.Terminal$", "^com\\.googlecode\\.iterm2$", "^co\\.zeit\\.hyper$", "^com\\.github\\.wez\\.wezterm$"] }]
+        }
+      ]
+    },
+    {
+      "description": "Ctrl+S -> Cmd+S (Save) (except terminals)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "s", "modifiers": { "mandatory": ["control"] } },
+          "to": [{ "key_code": "s", "modifiers": ["command"] }],
           "conditions": [{ "type": "frontmost_application_unless", "bundle_identifiers": ["^com\\.apple\\.Terminal$", "^com\\.googlecode\\.iterm2$", "^co\\.zeit\\.hyper$", "^com\\.github\\.wez\\.wezterm$"] }]
         }
       ]
