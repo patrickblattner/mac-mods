@@ -17,17 +17,18 @@ Important note: This works properly for Logitech MX combined, with DE-CH Layout 
 
 1. Download karabiner-elements
 2. Setup karabiner-elements
-3. Open console
-4. Execute the following commands:
+3. Chose Chose "ISO (...)"
+4. Open console
+5. Execute the following commands:
 ```SHELL
 cd ~/.config/karabiner/assets/complex_modifications
 curl -O https://raw.githubusercontent.com/patrickblattner/mac-mods/main/keyboard/windows_like_basics.json
 ```
-5. Right mouse click on the menu bar icon of karabinger-elements
-6. Select "Restart Karabiner-Elements"
-7. Right mouse click on the menu bar icon of karabinger-elements
-8. Select "Settings..."
-9. Select "Device"
+6. Right mouse click on the menu bar icon of karabinger-elements
+7. Select "Restart Karabiner-Elements"
+8. Right mouse click on the menu bar icon of karabinger-elements
+9. Select "Settings..."
+10. Select "Device"
 10. Activate "Modify events" for only the "Logitech MX Keyboard"
 11. Select "Virtual Keyboard"
 12. Chose "ISO (...)"
